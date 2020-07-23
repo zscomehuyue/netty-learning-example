@@ -10,6 +10,7 @@ spring:
     encoding: UTF-8
 
 server:
+#  port: 8080
   enabled: true
   bind_address: 0.0.0.0
   bind_port: 9876
@@ -20,3 +21,7 @@ server:
     worker_group_thread_count: 12
     #最大负载大小
     max_payload_size: 65536
+
+logging:
+  level:
+    root: warn
