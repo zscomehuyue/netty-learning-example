@@ -32,9 +32,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
         } else {
             response = "Did you say '" + request + "'?\r\n";
         }
-
         ChannelFuture future = ctx.write(response);
-
         if (close) {
             future.addListener(ChannelFutureListener.CLOSE);
         }
